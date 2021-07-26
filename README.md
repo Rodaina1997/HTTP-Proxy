@@ -11,9 +11,9 @@ The proxy server does the following (assuming it's single threaded) <br />
 5.Closes the TCP connection with both client and requested website’s server. (because HTTP 1.0 doesn’t have persistent connections). <br />
 # Implementation steps: <br />
 1. Making sure that the code validates HTTP requests correctly, <br />
-a.A valid HTTP request contains the following parts <br />
-<METHOD> <URL or PATH> <HTTP VERSION> v
-And a Host header, if the specified resource is a PATH (relative): <br />
+a.A valid HTTP request contains the following parts :
+<METHOD> <URL or PATH> <HTTP VERSION> <br />
+And a Host header, if the specified resource is a PATH (relative): 
 Host: <HOSTNAME> <br />
 All other headers just need to be properly formatted [name] [colon] [value], any names and values are valid. <br />
 <HEADER NAME>: <HEADER VALUE> <br />
