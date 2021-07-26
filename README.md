@@ -2,7 +2,7 @@
 # Intro 🚪
 HTTP proxies have a lot of use cases, from caching, authentication and preventing users from accessing malicious websites. They’re widely used in the world wide web and in business settings. Businesses use proxies to prevent their employees from surfing malicious websites, and enforce authentication and logging. Websites use proxies to provide caching and load balancing that shrinks websites load time. <br />
 # Description
-This project is a parallel HTTP proxy server that accepts a GET request and makes it on behalf of the client. The HTTP proxy returns the response if succeeded to the client, and an 404 if there was an error. <br />
+This project is a parallel HTTP proxy server that accepts a GET request and makes it on behalf of the client (forwards clients’ requests to their destination),The HTTP proxy returns the response if succeeded to the client, and an 404 if there was an error. <br />
 The proxy server does the following (assuming it's single threaded) <br />
 1.Opens a listening TCP socket, and binds it to the port specified by the first command line argument. <br />
 2.Uses TCP for communication with both clients and servers. <br />
