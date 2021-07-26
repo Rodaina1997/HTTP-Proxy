@@ -16,7 +16,7 @@ a.A valid HTTP request contains the following parts :
 And a Host header, if the specified resource is a PATH (relative): 
 Host: 'HOSTNAME' <br />
 All other headers just need to be properly formatted [name] [colon] [value], any names and values are valid. <br />
-<HEADER NAME>: <HEADER VALUE> <br />
+'HEADER NAME': 'HEADER VALUE' <br />
 b.After parsing HTTP requests correctly, making sure that we can identify which requests are malformed (have missing required parts or bad method). For HTTP/1.0 all the available methods are GET, HEAD, POST, -PUT- , any other method will return 501, missing parts in the request line of malformed headers will return 400. <br />
 2. Making sure that code parses the URL correctly (i.e. Sanitization) <br />
 After validation, the proxy will need to parse the requested URL. The proxy needs at most three pieces of information to be extracted: the requested host and port, and the requested path. If parsing the URL fails, returns INVALID_REQUEST, don't validate the URL. <br />
